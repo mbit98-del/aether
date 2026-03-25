@@ -1,17 +1,63 @@
 # Aether
 
-Fast, silent, precise. LAN-first file and clipboard transfer — no cloud, no accounts, no friction.
+Fast. Silent. Precise.  
+LAN-first file & clipboard sync — no cloud, no accounts, no friction.
+
+---
 
 ## What it does
 
-Drop a file onto a device. It arrives. Copy something on your phone. It's on your Mac. That's it.
+Drop a file onto a device. It arrives.  
+Copy something on your phone. It's on your Mac.
 
-- **Chunked file transfer** — 512 KB chunks, real-time progress with speed + ETA, cancel mid-send
-- **Clipboard sync** — bidirectional; agent writes directly to system clipboard on receive
-- **End-to-end encryption** — ECDH P-256 key exchange + AES-256-GCM for targeted sends
-- **Trust gating** — approve unknown devices once, permanently, or reject outright
-- **File preview** — image thumbnail, text preview, or type + size before saving; auto-saves after 8s
-- **Device intelligence** — latency trend arrows, connection age, local-network detection per device
+---
+
+## File transfer
+
+![Transfer](./docs/images/sending.png)
+
+- Chunked transfer (512 KB)
+- Real-time speed + ETA
+- Cancel anytime
+
+---
+
+## Clipboard sync
+
+![Clipboard](./docs/images/connect.png)
+
+- Bidirectional sync
+- Direct system clipboard integration
+
+---
+
+## Security & trust
+
+![Trust](./docs/images/trust.png)
+
+- End-to-end encryption (ECDH P-256 + AES-256-GCM)
+- Trust devices once, always, or per transfer
+
+---
+
+## Preview & UX
+
+![Preview](./docs/images/preview.png)
+
+- Image, text, and metadata preview
+- Auto-save after 8 seconds
+
+---
+
+## Device intelligence
+
+![Devices](./docs/images/device-panel.png)
+
+- Real-time latency & connection health
+- LAN-aware device detection
+- Connection age + stability indicators
+
+---
 
 ## Stack
 
@@ -43,6 +89,7 @@ cd apps/agent  && pnpm dev    # clipboard daemon
 Point the agent at a different server:
 
 ```bash
+# Example
 AETHER_SERVER=ws://192.168.x.x:3001 AETHER_NAME=my-mac pnpm dev
 ```
 
